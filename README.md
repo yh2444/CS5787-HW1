@@ -51,11 +51,27 @@ The test set was not used for model selection.
 
 ## Training
 
-Run the notebook from beginning to end:
+Run `HW1.ipynb` from beginning to end to reproduce all experiments.
 
-`HW1.ipynb`
+The notebook trains four configurations separately:
 
-The notebook trains all four configurations and saves the best model weights.
+1. **No Regularization**
+   - Uses the base LeNet-5 model.
+   - No dropout, weight decay, or batch normalization.
+
+2. **Dropout**
+   - Uses `LeNet5Dropout`.
+   - Dropout with probability `p = 0.5` is applied after the first two fully connected hidden layers.
+
+3. **Weight Decay**
+   - Uses the base LeNet-5 architecture.
+   - L2 regularization is applied through Adam with `weight_decay = 1e-4`.
+
+4. **Batch Normalization**
+   - Uses `LeNet5BatchNorm`.
+   - Batch normalization is applied after the convolutional and fully connected hidden layers.
+
+Each configuration is trained for 10 epochs. After each epoch, validation accuracy is computed. The checkpoint with the highest validation accuracy is saved and later used for final train and test evaluation.
 
 ## Saved Models
 
