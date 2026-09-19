@@ -131,3 +131,9 @@ CS5787-HW1/
 ├── lenet5_dropout.pth
 ├── lenet5_weight_decay.pth
 └── lenet5_batchnorm.pth
+
+### Hyperparameter Selection
+
+We used a batch size of 64 and a learning rate of 0.001 with the Adam optimizer because these provide a reasonable balance between training stability and computational efficiency for FashionMNIST. We trained all configurations for 10 epochs so that the regularization methods could be compared under the same training conditions.
+
+For Dropout, we used a dropout probability of 0.5, which provides moderate regularization for the fully connected hidden layers. For Weight Decay, we used a coefficient of 1e-4 to provide L2 regularization without excessively restricting the model parameters. The same settings were kept across experiments whenever possible to make the comparison fair.
