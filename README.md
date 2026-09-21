@@ -110,23 +110,6 @@ The model checkpoint with the highest validation accuracy was saved and later us
 The test set was not used for model selection.
 
 
-
-## Hyperparameter Selection
-
-A batch size of `64` was selected because it provides a reasonable balance between computational efficiency and stable gradient updates.
-
-A learning rate of `0.001` was used with the Adam optimizer because it provides stable training for this model and dataset without requiring extensive manual learning-rate tuning.
-
-All four configurations were trained for `10 epochs` so that their convergence behavior could be compared under the same training conditions.
-
-For Dropout, a dropout probability of `0.5` was used. This provides moderate regularization in the fully connected hidden layers by randomly disabling some hidden units during training.
-
-For Weight Decay, a coefficient of `1e-4` was used to apply L2 regularization without excessively restricting the model parameters.
-
-For Batch Normalization, PyTorch's default Batch Normalization settings were used. Batch Normalization layers were inserted into the network to normalize intermediate activations during training.
-
-The same settings were kept across experiments whenever possible to make the comparison between the four configurations fair.
-
 ## Hyperparameter Selection
 
 Hyperparameters were selected through experiments over a range of candidate values. We tested learning rates of `0.01`, `0.001`, and `0.0001`, batch sizes of `64`, `128`, and `256`, and both `Adam` and `SGD` optimizers. For Weight Decay, coefficients of `1e-3` and `1e-4` were tested, while dropout probabilities of `0.3` and `0.5` were compared.
