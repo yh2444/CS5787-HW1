@@ -302,3 +302,9 @@ CS5787-HW1/
 ├── lenet5_weight_decay.pth
 └── lenet5_batchnorm.pth
 ```
+
+
+## Generative AI Usage
+
+ChatGPT was used to help clarify concepts, debug code, and improve the organization and wording of the README. The final implementation and experimental results were produced and verified by the authors.
+
