@@ -116,7 +116,7 @@ Hyperparameters were selected through experiments over a range of candidate valu
 
 Based on the experimental results, a batch size of `64` and a learning rate of `0.001` achieved the best performance. The `Adam` optimizer was also selected based on the experimental comparison. A dropout probability of `0.5` and a Weight Decay coefficient of `1e-4` were selected for their respective configurations.
 
-All four configurations were trained for `10 epochs` using the selected hyperparameters to ensure a fair comparison of their performance and convergence behavior. For Batch Normalization, PyTorch's default Batch Normalization settings were used.
+All four configurations were trained for `50 epochs` using the selected hyperparameters to ensure a fair comparison of their performance and convergence behavior. For Batch Normalization, PyTorch's default Batch Normalization settings were used.
 
 
 ## Training
