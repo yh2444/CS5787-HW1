@@ -227,11 +227,12 @@ This is especially important for the Dropout experiment because Dropout must be 
 
 ## Convergence Results
 
-The following figure shows training and test accuracy over 10 epochs for all four LeNet-5 configurations.
+The following figures show training and test (Validation) accuracy over 50 epochs for all four LeNet-5 configurations.
 
-Each subplot contains both the training and test accuracy curves for one configuration.
-
-![LeNet-5 FashionMNIST Convergence](lenet5_convergence.png)
+![LeNet-5 FashionMNIST Base](Base.png)
+![LeNet-5 FashionMNIST BatchNorm](BatchNorm.png)
+![LeNet-5 FashionMNIST Dropout](Dropout.png)
+![LeNet-5 FashionMNIST weight decay](weight_decay.png)
 
 The x-axis represents the training epoch, and the y-axis represents classification accuracy.
 
