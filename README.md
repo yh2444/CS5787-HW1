@@ -295,7 +295,10 @@ These results show that the different techniques affect LeNet-5 in different way
 CS5787-HW1/
 ├── HW1.ipynb
 ├── README.md
-├── lenet5_convergence.png
+├── Base.png.png
+├── BatchNorm.png
+├── Dropout.png
+├── weight_decay.png
 ├── lenet5_base.pth
 ├── lenet5_dropout.pth
 ├── lenet5_weight_decay.pth
