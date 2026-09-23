@@ -96,7 +96,7 @@ The following training settings were used:
 - Batch size: `64`
 - Learning rate: `0.001`
 - Optimizer: `Adam`
-- Epochs: `10`
+- Epochs: `50`
 - Loss function: Cross-Entropy Loss
 - Dropout rate: `0.5`
 - Weight decay: `1e-4`
