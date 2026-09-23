@@ -244,50 +244,48 @@ There are eight accuracy curves in total:
 - Batch Normalization: Train and Test
 
 
-
 ## Selected Model Accuracy
 
 The values below correspond to the checkpoint with the highest validation accuracy for each configuration.
 
-Therefore, the reported accuracy does not necessarily correspond to the final training epoch.
+Therefore, the reported accuracies correspond to the selected best-validation checkpoint and do not necessarily represent the final training epoch.
 
 | Technique | Best Epoch | Train Accuracy | Validation Accuracy | Test Accuracy |
 |---|---:|---:|---:|---:|
-| No Regularization | 9 | 92.32% | 90.02% | 89.70% |
-| Dropout | 10 | 90.49% | 89.02% | 89.19% |
-| Weight Decay | 9 | 91.16% | 89.50% | 88.99% |
-| Batch Normalization | 9 | 95.57% | 91.13% | 90.91% |
+| No Regularization | 29 | 97.44% | 91.03% | 90.49% |
+| Dropout | 50 | 94.18% | **91.67%** | 90.65% |
+| Weight Decay | 22 | 95.26% | 91.10% | **90.98%** |
+| Batch Normalization | 20 | **97.61%** | 91.52% | 90.64% |
 
-All four configurations achieved more than 88% test accuracy.
+All four configurations achieved more than 90% test accuracy.
 
-The eight final train/test accuracies required for comparison are:
+Dropout achieved the highest validation accuracy at **91.67%**, while Weight Decay achieved the highest test accuracy at **90.98%**.
+
+The eight selected train/test accuracies required for comparison are:
 
 | Technique | Train Accuracy | Test Accuracy |
 |---|---:|---:|
-| No Regularization | 92.32% | 89.70% |
-| Dropout | 90.49% | 89.19% |
-| Weight Decay | 91.16% | 88.99% |
-| Batch Normalization | 95.57% | 90.91% |
-
-
+| No Regularization | 97.44% | 90.49% |
+| Dropout | 94.18% | 90.65% |
+| Weight Decay | 95.26% | 90.98% |
+| Batch Normalization | 97.61% | 90.64% |
 
 ## Conclusion
 
-All four LeNet-5 configurations achieved more than 88% test accuracy.
+All four LeNet-5 configurations achieved more than 90% test accuracy on the FashionMNIST dataset.
 
-The No Regularization model achieved a test accuracy of **89.70%**, providing a baseline for comparison with the other techniques.
+The No Regularization model achieved a test accuracy of **90.49%**, providing a baseline for comparison with the other techniques.
 
-The Dropout model achieved **89.19%** test accuracy. It had the smallest difference between training and test accuracy among the four configurations, suggesting that Dropout reduced the amount of overfitting. However, its test accuracy was slightly lower than the baseline model under the selected hyperparameters.
+The Dropout model achieved **90.65%** test accuracy and the highest validation accuracy of **91.67%**. It also had the smallest difference between training accuracy (94.18%) and test accuracy (90.65%) among the four configurations. This suggests that Dropout was effective at reducing overfitting and improving generalization compared with the baseline.
 
-The Weight Decay model achieved **88.99%** test accuracy. This was also slightly lower than the baseline result, indicating that the selected Weight Decay coefficient did not improve test performance in this experiment.
+The Weight Decay model achieved the highest test accuracy of **90.98%**, compared with the baseline test accuracy of 90.49%. This indicates that the selected Weight Decay coefficient slightly improved test performance in this experiment.
 
-The Batch Normalization model achieved the highest validation accuracy at **91.13%** and the highest test accuracy at **90.91%**. Its training accuracy was also the highest at **95.57%**.
+The Batch Normalization model achieved **91.52%** validation accuracy and **90.64%** test accuracy. It also reached the highest training accuracy of **97.61%**. Its test performance was similar to the other models, although the difference between its training and test accuracy was larger than that of Dropout and Weight Decay.
 
-The convergence curves also show that Batch Normalization reached high accuracy relatively quickly during training.
+Overall, **Weight Decay achieved the highest test accuracy, while Dropout achieved the highest validation accuracy and the smallest training-test accuracy gap**. The differences in test accuracy among all four configurations were relatively small, with all models achieving approximately 90–91% test accuracy.
 
-Overall, Batch Normalization produced the highest predictive performance in this experiment, while Dropout produced the smallest gap between training and test accuracy. Weight Decay and Dropout provided regularization but did not outperform the baseline model with the selected hyperparameter values.
+These results show that the different techniques affect LeNet-5 in different ways. Weight Decay provided the best final test performance in this experiment, while Dropout provided the strongest regularization effect based on the smaller gap between training and test accuracy.
 
-These results demonstrate that the different techniques affect LeNet-5 differently. Batch Normalization was the most effective for improving test accuracy in this experiment, while Dropout was useful for reducing the difference between training and test performance.
 
 
 
